@@ -3,6 +3,7 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
+ *= require bootstrap_and_overrides
  *= require_tree .
 */
 
@@ -27,7 +28,6 @@ a {
 }
 
 #container {
-  width: 75%;
   margin: 0 auto;
   background-color: #FFF;
   padding: 20px 40px;
@@ -90,7 +90,7 @@ form .field, form .actions {
   margin: 15px 0;
 }
 
-#user_nav {
+#usuario_nav {
   margin: 15px 0;
 }
 

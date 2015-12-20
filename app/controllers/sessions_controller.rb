@@ -1,19 +1,20 @@
 class SessionsController < ApplicationController
+
   def new
   end
   
   def create
-    user = login(params[:email], params[:password], params[:remember_me])
-    if user
-      redirect_back_or_to root_url, :notice => "Logged in!"
+    usuario = login(params[:email], params[:password], params[:remember_me])
+    if usuario
+      redirect_back_or_to root_path, :notice => "Iniciaste Sesión!"
     else
-      flash.now.alert = "Email or password was invalid"
+      flash.now.alert = "El email y la contraseña no coinciden"
       render :new
     end
   end
   
   def destroy
     logout
-    redirect_to root_url, :notice => "Logged out!"
+    redirect_to root_url, :notice => "Cerraste Sesión!"
   end
 end

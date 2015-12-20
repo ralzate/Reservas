@@ -1,0 +1,11 @@
+rails generate scaffold taxi_aereo nombre:string tipo:string categorias:string descripcion:text
+
+rails generate migration AddAvatar1ToPost
+rails generate migration AddAvatar2ToPost
+rails generate migration AddAvatar3ToPost
+
+rails generate scaffold cliente nombre:string apellido:string documento:string email:string telefono:string 
+ 
+rails generate scaffold tour fecha:date precio:integer duracion:integer taxi_aereo:references
+
+rails generate scafoold reserva fecha:date nombre_cliente:string 

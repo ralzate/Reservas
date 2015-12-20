@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20151021204146) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", force: :cascade do |t|
+  create_table "usuarios", force: :cascade do |t|
     t.string   "email",                        null: false
     t.string   "crypted_password"
     t.string   "salt"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20151021204146) do
     t.datetime "remember_me_token_expires_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["remember_me_token"], name: "index_users_on_remember_me_token", using: :btree
+  add_index "usuarios", ["email"], name: "index_usuarios_on_email", unique: true, using: :btree
+  add_index "usuarios", ["remember_me_token"], name: "index_usuarios_on_remember_me_token", using: :btree
 
 end
